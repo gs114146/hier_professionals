@@ -1,0 +1,73 @@
+<section class="login-block registr">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 login-sec">
+            <h2 class="text-left">Create Account</h2>
+            <p class="login_pr">Already have an account? <a [routerLink]="'/login'">Login</a></p>
+            <form class="login-form row" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+               <div class="form-group col-md-6 col-xs-12">
+                  <input type="text" class="form-control" placeholder="First Name"  formControlName="first_name" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">  
+                  <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.first_name.errors.required">First Name is required.</div>
+                  </div>  
+               </div>
+               <div class="form-group col-md-6 col-xs-12">
+                  <input type="text" class="form-control" placeholder="Last Name" formControlName="last_name" [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
+                  <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.last_name.errors.required">Last Name is required.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="text" class="form-control" placeholder="City"  formControlName="city" [ngClass]="{ 'is-invalid': submitted && f.city.errors }">
+                  <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                        <div *ngIf="f.city.errors.required">City is required.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="text" class="form-control" placeholder="Province" formControlName="province" [ngClass]="{ 'is-invalid': submitted && f.province.errors }">
+                  <div *ngIf="submitted && f.province.errors" class="invalid-feedback">
+                        <div *ngIf="f.province.errors.required">Province is required.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="email" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required.</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="password" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="password" class="form-control" placeholder="Confirm - Password" formControlName="confirm_password" [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }">
+                  <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback">
+                        <div *ngIf="f.confirm_password.errors.required">Confirm Password is required.</div>
+                  </div>
+               </div>
+               <div class="form-group col-md-12 col-xs-12">
+                  <input type="submit" class="btnSubmit" value="Register" />
+               </div>
+            </form>
+         </div>
+         <div class="col-md-6 banner-sec">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item1">
+                     <img class="d-block img-fluid" src="assets/img/img_3.jpg" alt="First slide">
+                     <div class="carousel-caption d-none d-md-block">
+                        <div class="banner-text">
+                           <h2>Welcome</h2>
+                           <p>Sed do eiusmod temporut labore et dolore magna aliqua. Your perfect place to buy & sell </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

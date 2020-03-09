@@ -1,0 +1,39 @@
+    <section class="hero-home about_hero inner_banner">
+      <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper dark-overlay">
+          <div style="background-image:url(assets/img/about_banner.jpg)" class="swiper-slide"></div>
+        </div>
+      </div>
+      <div class="container py-6 py-md-7 text-white z-index-20">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="text-center text-lg-left">
+              <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow banner_txt"><span>About Us</span></p>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-6 bg-gray-100 section_1 about_detail">
+      <div class="container">
+        <div class="text-left pb-lg-4">          
+          
+        <div class="row featurette">
+          <div class="col-md-6">
+            <div class="img_inner_img">
+              <img src="{{url + aboutus.image }}">
+            </div>
+          </div>
+          <div class="col-md-6">         
+            <h2 class="mb-5 title_tit">About <span>Us</span></h2>        
+            <p class="lead" [innerHTML]="aboutus.heading">
+            </p>
+          
+          </div>   
+          <div class=" text-center col-md-12 about_section_2" >       
+            <p class="lead" [innerHTML]="aboutus.description"></p>
+          </div> 
+        </div>        
+      </div>
+  </div>
+</section>

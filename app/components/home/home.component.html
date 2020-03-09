@@ -1,0 +1,257 @@
+<section class="hero-home">
+   <div class="swiper-container hero-slider">
+      <div class="swiper-wrapper dark-overlay">
+         <div style="background-image:url(assets/img/home_banner.jpg)" class="swiper-slide"></div>
+         <div style="background-image:url(assets/img/home_banner.jpg)" class="swiper-slide"></div>
+         <div style="background-image:url(assets/img/home_banner.jpg)" class="swiper-slide"></div>
+         <div style="background-image:url(assets/img/home_banner.jpg)" class="swiper-slide"></div>
+      </div>
+   </div>
+   <div class="container py-6 py-md-7 text-white z-index-20">
+      <div class="row">
+         <div class="col-xl-12">
+            <div class="text-center text-lg-left">
+               <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow banner_txt">Door 2 Services is an online marketplace designed for professionals where we have over 30 professional categories where our professionals can be directly reached by millions of people for professional services needs by a click of button.</p>
+            </div>
+            <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
+               <form [formGroup]="searchProfessional">
+                  <div class="row">
+                     <div class="col-lg-4 d-flex align-items-center form-group">
+                        <input type="text" name="search" placeholder="What are you searching for?" class="form-control border-0 shadow-0">
+                     </div>
+                     <div class="col-lg-3 d-flex align-items-center form-group">
+                        <div class="input-label-absolute input-label-absolute-right w-100">
+                           <label for="location" class="label-absolute"><i class="fa fa-crosshairs"></i><span class="sr-only">City</span></label>
+                           <input type="text" name="location" placeholder="Location" id="location" class="form-control border-0 shadow-0">
+                        </div>
+                     </div>
+                     <div class="col-lg-3 d-flex align-items-center form-group no-divider">
+                        <select title="Categories" data-style="btn-form-control" class="selectpicker">
+                           <option value="small">Restaurants</option>
+                           <option value="medium">Hotels</option>
+                           <option value="large">Cafes</option>
+                           <option value="x-large">Garages</option>
+                        </select>
+                     </div>
+                     <div class="col-lg-2">
+                        <button type="submit" class="btn btn-primary btn-block rounded-xl h-100">Search </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="py-6 bg-gray-100 section_1 home_section1" id="tabs">
+   <div class="container">
+      <div class="text-center pb-lg-4">
+         <h2 class="mb-5 title_tit">{{sections['how-it-works']?.title }}</h2>
+         <p class="subtitle text-secondary title_para">{{sections['how-it-works']?.heading }}</p>
+      </div>
+      <div class="row">
+         <div class="col-xs-12 ">
+            <ul class="nav nav-tabs" role="tablist">
+               <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#About">About</a>
+               </li>
+            </ul>
+            <div class="tab-content">
+               <div id="home" class="container tab-pane active">
+                  <br>
+                  <section class="py-6 bg-gray-100 section_1">
+                     <div class="container">
+                        <div class="row featurette">
+                           <div class="col-md-5">
+                              <div class="img_inner_img">
+                                 <img class="img-fluid z-depth-1" width="500" height="281" src="assets/img/icon_video.png" alt="video" data-toggle="modal" data-target="#modal1">                                       
+                              </div>
+                           </div>
+                           <div class="col-md-7">
+                              <p class="lead" [innerHTML]="sections['how-it-works']?.description"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+               <div id="About" class="container tab-pane fade">
+                  <br>
+                  <section class="py-6 bg-gray-100 section_1">
+                     <div class="container">
+                        <div class="row featurette">
+                           <div class="col-md-5">
+                              <div class="img_inner_img">
+                                 <img class="img-fluid z-depth-1" width="500" height="281" src="assets/img/icon_video.png" alt="video" data-toggle="modal" data-target="#modal2">                                       
+                              </div>
+                           </div>
+                           <div class="col-md-7">
+                              <p class="lead" [innerHTML]="sections['how-it-works']?.vendor_description"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="py-6 section_2">
+   <div class="container">
+      <div class="text-center pb-lg-4">
+         <h2 class="mb-5 title_tit">{{ sections['type-of-professional']?.title }}</h2>
+         <p class="subtitle text-secondary title_para"> {{ sections['type-of-professional']?.heading }}</p>
+      </div>
+      <div class="row">
+         <!-- blog item-->
+         <div class="col-lg-4 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100">
+               <a href="post.html"><img src="assets/img/icon_1.png" alt="..." class="img-fluid card-img-top"/></a>
+               <div class="card-body">
+                  <h5 class="my-2"><a href="post.html" class="text-dark">Financial & Legal</a></h5>
+                  <p class="bottom_m"><a href="post.html" class="btn btn-link pl-0">(6)Categories</a></p>
+               </div>
+            </div>
+         </div>
+         <!-- blog item-->
+         <div class="col-lg-4 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100">
+               <a href="post.html"><img src="assets/img/icon_2.png" alt="..." class="img-fluid card-img-top"/></a>
+               <div class="card-body">
+                  <h5 class="my-2"><a href="post.html" class="text-dark">Financial & Legal</a></h5>
+                  <p class="bottom_m"><a href="post.html" class="btn btn-link pl-0">(6)Categories</a></p>
+               </div>
+            </div>
+         </div>
+         <!-- blog item-->
+         <div class="col-lg-4 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100">
+               <a href="post.html"><img src="assets/img/icon_3.png" alt="..." class="img-fluid card-img-top"/></a>
+               <div class="card-body">
+                  <h5 class="my-2"><a href="post.html" class="text-dark">Financial & Legal</a></h5>
+                  <p class="bottom_m"><a href="post.html" class="btn btn-link pl-0">(6)Categories</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 offset-2  col-sm-6 col-sm-offset-0 mb-4 hover-animate box_txt_contant">
+            <div class="card shadow border-0 h-100">
+               <div class="card-body">
+                  <h5 class="my-2"><a href="post.html" class="text-dark">Best books about Photography          </a></h5>
+                  <p class="contnt">Locksmith</p>
+                  <p class="contnt">Mechanic (automobile)</p>
+                  <p class="contnt">Mechanic (electronics)</p>
+                  <p class="contnt">Furniture installation</p>
+                  <p class="contnt">Smart devices installation</p>
+                  <a href="post.html" class="btn btn-link pl-0">View all<i class="fal fa-chevron-double-right ml-2"></i> </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-6 mb-4 hover-animate">
+            <div class="card shadow border-0 h-100">
+               <a href="post.html"><img src="assets/img/icon_4.png" alt="..." class="img-fluid card-img-top"/></a>
+               <div class="card-body">
+                  <h5 class="my-2"><a href="post.html" class="text-dark">Financial & Legal</a></h5>
+                  <p class="bottom_m"><a href="post.html" class="btn btn-link pl-0">(6)Categories</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="py-6  section_3a">
+   <section class="py-0 overflow-hidden section_3" id="digital-we-do">
+      <div class="container-fluid px-lg-0">
+         <div class="row align-items-center">
+            <div class="col-lg-6 align-self-stretch py-11">
+               <div class="bg-holder" style="background-image:url({{url + sections['customer-section']?.image }});"></div>
+            </div>
+            <div class="col-lg-6 px-sm-6 px-md-8 px-lg-6 px-xl-8 py-6 py-md-8 align-self-stretch bg-light">
+               <div class="owl-carousel owl-theme owl-nav-outer owl-theme-white px-4 owl-loaded owl-drag">
+                  <h3>{{ sections['customer-section']?.title }}</h3>
+                  <p  [innerHTML]="sections['customer-section']?.description"></p>
+                  <a class="buttn_btn" href="">Read More</a>
+               </div>
+            </div>
+         </div>
+         <div class="row align-items-center">
+            <div class="col-lg-6 align-self-stretch py-11 order-1">
+               <div class="bg-holder" style="background-image:url({{url + sections['vendor-section']?.image }});"></div>
+            </div>
+            <div class="col-lg-6 px-sm-6 px-md-8 px-lg-6 px-xl-8 py-6 py-md-8 align-self-stretch bg-light order-0">
+               <div class="owl-carousel owl-theme owl-nav-outer owl-theme-white px-4 owl-loaded owl-drag">
+                  <h3>{{ sections['vendor-section']?.title }}</h3>
+                  <p  [innerHTML]="sections['vendor-section']?.description"></p>
+                  <a class="buttn_btn" href="">Read More</a>                
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</section>
+<section class="py-6 bg-gray-100 section_4">
+    <div class="container">
+        <div class="text-center pb-lg-4">
+            <h2 class="mb-5 title_tit">{{ sections['blog-section']?.title }}</h2>
+            <p class="subtitle text-secondary title_para">{{ sections['blog-section']?.heading }}</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4 hover-animate" *ngFor="let blog of blogs | slice:0:3; let ind=index;">
+                <div class="card shadow border-0 h-100">
+                    <a href="post.html"><img src="{{url + blog.image }}" alt="..." class="img-fluid card-img-top"/></a>
+                    <div class="card-body">
+                        <h5 class="my-2"><a href="post.html" class="text-dark">{{blog.heading }}</a></h5>
+                        <p class="my-2 text-muted text-sm" [innerHTML]="blog.description | truncatetext:200 "></p>
+                        <p class="icon"><a href="post.html" class="btn btn-link pl-0">Read more<i class="fa fa-long-arrow-alt-right ml-2"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+
+   <div class="col-lg-4 col-md-12 mb-4">
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <!--Content-->
+            <div class="modal-content">
+               <!--Body-->
+               <div class="modal-body mb-0 p-0">
+                  <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U"
+                        allowfullscreen></iframe>
+                  </div>
+               </div>
+               <!--Footer-->
+               <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!--/.Content-->
+         </div>
+      </div>
+
+   </div>
+   <div class="col-lg-4 col-md-6 mb-4">
+      <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <!--Content-->
+            <div class="modal-content">
+               <!--Body-->
+               <div class="modal-body mb-0 p-0">
+                  <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U"
+                        allowfullscreen></iframe>
+                  </div>
+               </div>
+               <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
